@@ -2,6 +2,7 @@ let posts = [
   {id: 1, title: 'pierwszy post', text: 'tresc posta'},
   {id: 2, title: 'drugi post', text: 'tresc posta drugiego'}
 ]
+
 export class PostService {
 
   static list() {
@@ -20,7 +21,12 @@ export class PostService {
 
   static get(id) {
     return new Promise((resolve, reject) => {
-      resolve(posts[parseInt(id)-1]);
+      for(let post of posts) {
+        if(post.id === parseInt(id)) {
+          return resolve(post);
+        }
+      }
+      reject('Post not found. Please enter a valid post ID.');
     })
   }
 
