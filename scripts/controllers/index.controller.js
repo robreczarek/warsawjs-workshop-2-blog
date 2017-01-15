@@ -1,8 +1,12 @@
+import routie from 'libs/routie.js';
 import {PostService} from '../services/post.service.js';
+import {PostListComponent} from '../components/post-list.component.js';
 
-export const path = '/index.html';
+let $page = document.getElementById('page');
 
-export function index() {
-  console.log('run index')
-  PostService.create({'sample': 'data'})
-}
+routie('', controller);
+
+export function controller() {
+  PostService.list().then(posts=>{
+    PostListComponent.render({posts:posts}, $page);
+  })
