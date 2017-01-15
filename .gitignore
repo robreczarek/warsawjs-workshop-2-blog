@@ -77,3 +77,6 @@ jspm_packages
 ehthumbs.db
 Thumbs.db
 Desktop.ini
+
+# json-server database
+db.json

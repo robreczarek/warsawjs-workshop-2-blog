@@ -1,0 +1,23 @@
+{
+  "posts": [
+    {
+      "title": "ha",
+      "text": "haha",
+      "id": 8
+    },
+    {
+      "title": "sdfsd",
+      "text": "sdfsdf",
+      "id": 9
+    },
+    {
+      "title": "Działa?",
+      "text": "Działa!",
+      "id": 10
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
