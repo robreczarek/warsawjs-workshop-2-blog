@@ -1,4 +1,3 @@
-
 export class PostService {
 
   static list() {
@@ -29,5 +28,4 @@ export class PostService {
       method: "DELETE"
     });
   }
-
 }
