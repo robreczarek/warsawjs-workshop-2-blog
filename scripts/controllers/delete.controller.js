@@ -7,5 +7,4 @@ export function controller(id) {
   PostService.delete(id).then(post=>{
     routie('');
   })
-
 }
