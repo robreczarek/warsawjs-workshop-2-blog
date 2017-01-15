@@ -7,5 +7,7 @@ let $page = document.getElementById('page');
 routie('', controller);
 
 export function controller() {
-  PostListComponent.render({posts:[]}, $page)
+  PostService.list().then(posts=>{
+    PostListComponent.render({posts:posts}, $page);
+  })
 }
