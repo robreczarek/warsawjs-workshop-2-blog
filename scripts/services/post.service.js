@@ -12,7 +12,7 @@ export class PostService {
 
   static create(data) {
     data.id = posts.length+1;
-    posts.unshift(data);
+    posts.push(data);
     return new Promise((resolve, reject) => {
       resolve(data);
     })
@@ -21,6 +21,17 @@ export class PostService {
   static get(id) {
     return new Promise((resolve, reject) => {
       resolve(posts[parseInt(id)-1]);
+    })
+  }
+
+  static delete(id) {
+    return new Promise((resolve, reject) => {
+      if (posts[id-1]) {
+        posts.splice(id-1, 1);
+        resolve();
+      } else {
+        reject();
+      }
     })
   }
 

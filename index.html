@@ -51,7 +51,7 @@
           {{post.title}}
         </a>
 
-        <a href="#">
+        <a href="#delete/{{post.id}}">
           <i class="right material-icons">delete</i>
         </a>
       </h5>
@@ -72,6 +72,7 @@
                   id="post-title"
                   type="text"
                   placeholder="Tytuł"
+                  name="title"
                   required
           />
         </div>
@@ -82,6 +83,7 @@
             id="post-body"
             class="materialize-textarea"
             placeholder="Treść"
+            name="text"
             required
           ></textarea>
         </div>

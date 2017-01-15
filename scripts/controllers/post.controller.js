@@ -8,6 +8,6 @@ routie('post/:id', controller);
 
 export function controller(id) {
   PostService.get(id).then(post=>{
-    PostComponent.render({post:post}, $page);
+    PostComponent.render({post}, $page);
   })
 }
