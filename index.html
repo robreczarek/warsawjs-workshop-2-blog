@@ -101,7 +101,16 @@
 
 </section>
 
-
-
 </body>
 </html>
+
+<script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.41/system.js"></script>
+<script>
+    SystemJS.config({
+        baseURL: 'scripts'
+    });
+    SystemJS.import('main.js');
+
+</script>
+
