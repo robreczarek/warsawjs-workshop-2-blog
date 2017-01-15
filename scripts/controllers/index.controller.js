@@ -10,4 +10,3 @@ export function controller() {
   PostService.list().then(posts=>{
     PostListComponent.render({posts:posts}, $page);
   })
-}
