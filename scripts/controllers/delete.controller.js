@@ -4,7 +4,7 @@ import {PostService} from '../services/post.service.js';
 routie('delete/:id', controller);
 
 export function controller(id) {
-  PostService.delete(id).then(post=>{
+  PostService.delete(id).then(()=>{
     routie('');
   })
 
